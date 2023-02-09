@@ -33,7 +33,7 @@ public:
 		return elementCount; 
 	}
 
-	void print()
+	void printElements()
 	{
 		for (int i = 0; i < elementCount; i++)
 		{
@@ -52,5 +52,14 @@ public:
 		data[index] = dataItem;
 	}
 	
+    void printArray()
+    {
+        cout << "[ ";
+        for(int i = 0; i < elementCount; ++i)
+        {
+            cout << getElementAt(i) << ", ";
+        }
+        cout << "]" << endl;
+    }
 
 };

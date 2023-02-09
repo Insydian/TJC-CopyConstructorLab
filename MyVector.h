@@ -122,6 +122,18 @@ public:
 	}
 
 
+    MyVector(const MyVector& vectorToBeCopied)
+    {
+       m_Size = vectorToBeCopied.m_Size;
+       m_Capacity = vectorToBeCopied.m_Capacity;
+       m_Data = new T[m_Capacity];
+       for(int i = 0; i < vectorToBeCopied.m_Size; ++i)
+       {
+
+           m_Data[i] = vectorToBeCopied.m_Data[i];
+       }
+    }
+
 
 	~MyVector()
 	{
